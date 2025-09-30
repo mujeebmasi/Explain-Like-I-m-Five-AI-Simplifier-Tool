@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from google import genai
 
 # Put your actual Gemini key here
-os.environ["GEMINI_API_KEY"] = "AIzaSyBIcCMwKMUEQ272HXN1yla4QD7Iv6enaR4"
+os.environ["GEMINI_API_KEY"] = "YOUR_API_KEY"
 
 def clean_markdown_text(text: str) -> str:
     """Remove markdown formatting from text"""
@@ -114,3 +114,4 @@ async def test_wiki(topic: str):
 @app.get("/")
 def home():
     return {"message": "ELI5 Simplifier with Wikipedia is working!"}
+
